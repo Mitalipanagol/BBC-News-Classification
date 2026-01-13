@@ -8,7 +8,7 @@ This script:
 4. Saves the trained model and vectorizer to model/ folder
 
 Categories: Business, UK, World, Entertainment, Technology, Health, Science, Sports
-Accuracy: ~81.6% on test set
+Accuracy: ~82% on test set
 """
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer

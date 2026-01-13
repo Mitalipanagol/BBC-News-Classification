@@ -129,11 +129,22 @@ Output: Business (Confidence: 92%)
 ## 🧠 Technical Details
 
 ### Model Architecture
-- **Algorithm:** Logistic Regression
-- **Vectorization:** TF-IDF (5000 features, English stop words removed)
-- **Class Balancing:** `class_weight='balanced'` to handle imbalanced data
-- **Training/Test Split:** 80/20
-- **Random State:** 42 (for reproducibility)
+
+| Component | Specification | Details |
+|-----------|--------------|---------|
+| **Algorithm** | Logistic Regression | Multi-class classification (one-vs-rest) |
+| **Vectorization** | TF-IDF | 5000 max features, English stop words removed |
+| **Class Balancing** | `class_weight='balanced'` | Handles imbalanced categories |
+| **Training Split** | 80/20 | 26,113 train / 6,529 test articles |
+| **Random State** | 42 | Ensures reproducibility |
+| **Max Iterations** | 1000 | Convergence parameter |
+| **Solver** | lbfgs | Default solver for multi-class |
+
+### Accuracy Measurement
+- **Metric:** Classification accuracy on held-out test set (20% of data)
+- **Validation:** Stratified split maintains category distribution
+- **Evaluation:** Precision, Recall, F1-Score per category
+- **Overall Accuracy:** 81.6% across all 8 categories
 
 ### Why These Choices?
 
@@ -205,10 +216,51 @@ Categories are extracted from article URLs:
 **Note:** Dataset is **imbalanced** - this is why we use `class_weight='balanced'`
 
 ### Getting the Dataset
-The dataset (`bbc_news1.csv`) is not included in this repository due to size.
-- **Option 1:** Use your own BBC news dataset
-- **Option 2:** Contact me for the dataset
-- **Option 3:** Scrape BBC news (ensure compliance with terms of service)
+
+**⚠️ Important:** The dataset (`bbc_news1.csv`) is **not included** in this repository due to file size (>100MB).
+
+#### **Option 1: Download from Kaggle (Recommended)**
+```bash
+# Visit: https://www.kaggle.com/datasets/hgultekin/bbcnewsarchive
+# Or search "BBC News Archive" on Kaggle
+# Download and place in project root as bbc_news1.csv
+```
+
+#### **Option 2: Use Alternative BBC Dataset**
+- [BBC News Classification Dataset](https://www.kaggle.com/c/learn-ai-bbc/data)
+- [BBC Full Text Document Classification](https://www.kaggle.com/datasets/shivamkushwaha/bbc-full-text-document-classification)
+
+#### **Option 3: Create Your Own**
+Scrape BBC News (ensure compliance with BBC's terms of service):
+```python
+# Example structure needed:
+# title, description, link
+# "Apple shares rise", "Tech giant reports...", "/news/business/article-123"
+```
+
+**Expected Format:**
+```csv
+title,description,link
+"Article Title","Article description","/news/category/article-id"
+```
+
+---
+
+## 🖼️ Screenshots
+
+### Web Interface
+![Web Interface](screenshots/interface.png)
+*Clean, user-friendly interface for news classification*
+
+### Prediction Example
+![Prediction Example](screenshots/prediction.png)
+*Real-time classification with confidence scores*
+
+**Note:** Screenshots folder not included in repository. To add your own:
+1. Run the app: `python app.py`
+2. Take screenshots of the interface
+3. Create `screenshots/` folder
+4. Add images: `interface.png`, `prediction.png`
 
 ---
 
@@ -286,13 +338,69 @@ Not just a Jupyter notebook - full deployment!
 
 ---
 
+---
+
+## 🌐 Deployment
+
+### Deploy to Cloud (Optional)
+
+This app can be deployed to various platforms:
+
+#### **Option 1: Render (Recommended - Free)**
+```bash
+# 1. Create render.yaml:
+services:
+  - type: web
+    name: bbc-news-classifier
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+
+# 2. Push to GitHub
+# 3. Connect to Render.com
+# 4. Deploy!
+```
+
+#### **Option 2: Heroku**
+```bash
+# 1. Create Procfile:
+web: python app.py
+
+# 2. Deploy:
+heroku create bbc-news-classifier
+git push heroku main
+```
+
+#### **Option 3: Railway**
+```bash
+# 1. Push to GitHub
+# 2. Import to Railway.app
+# 3. Auto-deploys!
+```
+
+#### **Option 4: AWS/GCP/Azure**
+- Use EC2/Compute Engine/App Service
+- Install dependencies
+- Run `python app.py`
+- Configure security groups/firewall
+
+**Note:** For production deployment:
+- Set `debug=False` in `app.py`
+- Use production WSGI server (gunicorn)
+- Add environment variables for sensitive data
+- Enable HTTPS
+
+---
+
 ## 📈 Future Improvements
 
 - [ ] Add confidence threshold filtering
-- [ ] Deploy to cloud (Heroku/AWS)
-- [ ] Add more categories
+- [ ] Deploy to cloud (see [Deployment](#-deployment) section)
+- [ ] Add more categories (e.g., Politics, Environment)
 - [ ] Implement A/B testing for different models
-- [ ] Add user feedback loop
+- [ ] Add user feedback loop for continuous improvement
+- [ ] Create REST API documentation (Swagger/OpenAPI)
+- [ ] Add model versioning and experiment tracking (MLflow)
 
 ---
 

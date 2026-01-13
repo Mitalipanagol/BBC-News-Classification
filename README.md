@@ -361,11 +361,5 @@ Not just a Jupyter notebook - full deployment!
 
 ---
 
-## 📄 License
-
-This project is open source and available under the MIT License.
-
----
-
 *Built with Python, scikit-learn, and Flask | 2024*
 

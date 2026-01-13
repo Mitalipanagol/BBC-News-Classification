@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BBC News Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📰 BBC News Classifier</h1>
+        <p>Classify news articles using Machine Learning</p>
+        
+        <div class="form">
+            <label>Article Text</label>
+            <textarea id="text" rows="6" placeholder="Paste your news article here..."></textarea>
+
+            <button onclick="classify()">Classify Article</button>
+        </div>
+        
+        <div id="result" style="display:none;">
+            <h2>Result</h2>
+            <div class="prediction">
+                <strong>Category:</strong> <span id="category"></span>
+            </div>
+            <div class="confidence">
+                <strong>Confidence:</strong> <span id="confidence"></span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        async function classify() {
+            const text = document.getElementById('text').value;
+
+            if (!text.trim()) {
+                alert('Please enter some text!');
+                return;
+            }
+
+            const response = await fetch('/predict', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({text})
+            });
+
+            const data = await response.json();
+
+            if (data.error) {
+                alert(data.error);
+                return;
+            }
+
+            document.getElementById('category').textContent = data.prediction.toUpperCase();
+            document.getElementById('confidence').textContent = data.confidence.toFixed(1) + '%';
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+

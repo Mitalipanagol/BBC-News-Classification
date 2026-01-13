@@ -1,0 +1,26 @@
+# Test Examples for BBC News Classifier
+
+## Business
+Apple shares surge after record iPhone sales. The tech giant reported quarterly earnings that beat analyst expectations, with revenue up 15% year-over-year.
+
+## UK
+Prime Minister announces new NHS funding plan. The government will invest £10 billion in healthcare infrastructure over the next five years.
+
+## World
+Ukraine and Russia hold peace talks in Geneva. Diplomats from both nations met to discuss potential ceasefire agreements.
+
+## Entertainment
+Marvel's latest superhero film breaks box office records. The blockbuster earned over $200 million in its opening weekend, making it the highest-grossing film of the year.
+
+## Technology
+Google unveils new AI chatbot to compete with ChatGPT. The search giant announced its latest artificial intelligence tool at a developer conference.
+
+## Health
+Mental health services face unprecedented demand post-pandemic. Therapists report waiting lists of up to six months as anxiety and depression cases surge.
+
+## Science
+NASA's James Webb telescope captures stunning images of distant galaxies. The revolutionary space observatory has revealed never-before-seen details of the early universe.
+
+## Sports
+Manchester United signs star striker for record fee. The Premier League club paid £100 million to secure the Brazilian forward.
+

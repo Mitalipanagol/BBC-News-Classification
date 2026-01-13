@@ -1,0 +1,77 @@
+# Dataset (too large)
+*.csv
+bbc_news1.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (for frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+frontend/build/
+frontend/node_modules/
+
+# Keep models - they're needed for deployment
+
+# Temporary test files
+explore_categories.py
+analyze_health_articles.py
+test_model_directly.py
+
+# Extra documentation (keep only main README)
+BUG_FIXED.md
+COPY_PASTE_TESTS.txt
+DATASET_INFO.md
+DEMO_CHECKLIST.md
+FINAL_MODEL_8_CATEGORIES.md
+PROJECT_SUMMARY.md
+QUICKSTART.md
+QUICK_TEST_GUIDE.md
+SUCCESS_FIXED.md
+TEST_ALL_CATEGORIES.md
+TEST_INPUTS.md
+UPDATED_MODEL_READY.md

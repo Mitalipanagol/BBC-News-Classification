@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-2.0+-green.svg)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0+-orange.svg)
-![Accuracy](https://img.shields.io/badge/Accuracy-81.6%25-brightgreen.svg)
+![Accuracy](https://img.shields.io/badge/Accuracy-82%25-brightgreen.svg)
 
 ---
 

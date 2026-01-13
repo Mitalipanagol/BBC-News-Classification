@@ -412,19 +412,15 @@ This is a portfolio project, but suggestions are welcome!
 
 ## 📧 Contact
 
-**Built by:** [Your Name]
-**LinkedIn:** [Your LinkedIn]
-**Email:** [Your Email]
+**Built by:** Mitali P.A
+**LinkedIn:** https://www.linkedin.com/in/mitali-anagolkar/
+**Email:** mitalipanagol@gmail.com
 
 ---
 
 ## 📄 License
 
 This project is open source and available under the MIT License.
-
----
-
-**⭐ If you found this helpful, please star this repository!**
 
 ---
 

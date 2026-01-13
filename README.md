@@ -353,9 +353,11 @@ Not just a Jupyter notebook - full deployment!
 
 ## 📧 Contact
 
-**Built by:** Mitali P.A
-**LinkedIn:** https://www.linkedin.com/in/mitali-anagolkar/
-**Email:** mitalipanagol@gmail.com
+-**Built by:** Mitali P.A
+
+-**LinkedIn:** https://www.linkedin.com/in/mitali-anagolkar/
+
+-**Email:** mitalipanagol@gmail.com
 
 ---
 

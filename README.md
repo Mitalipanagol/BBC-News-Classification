@@ -337,6 +337,19 @@ Not just a Jupyter notebook - full deployment!
 - Professional naming
 
 ---
+🖥️ This application runs locally using Flask. Screenshots demonstrate the working interface.
+
+<img width="945" height="952" alt="image" src="https://github.com/user-attachments/assets/f76d150a-0d97-467d-9502-daf6d57a29f6" />
+
+<img width="926" height="965" alt="image" src="https://github.com/user-attachments/assets/914a960b-641f-4d63-ac64-44f267b7823b" />
+
+<img width="943" height="968" alt="image" src="https://github.com/user-attachments/assets/5c96f48b-44bb-44d8-9669-7d449438f9f3" />
+
+<img width="935" height="957" alt="image" src="https://github.com/user-attachments/assets/9fe5128b-ec15-4db3-8f3b-d373fe663113" />
+
+<img width="931" height="907" alt="image" src="https://github.com/user-attachments/assets/56950f0f-a39d-4eb7-9cea-d725247c9329" />
+
+---
 
 ## 📧 Contact
 

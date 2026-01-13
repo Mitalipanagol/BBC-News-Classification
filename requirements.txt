@@ -6,4 +6,5 @@ seaborn
 Flask
 joblib
 jupyter
+gunicorn
 

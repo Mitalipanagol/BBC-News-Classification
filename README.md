@@ -361,5 +361,5 @@ Not just a Jupyter notebook - full deployment!
 
 ---
 
-*Built with Python, scikit-learn, and Flask | 2024*
+*Built with Python, scikit-learn, and Flask | 2025*
 
